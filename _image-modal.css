@@ -23,5 +23,6 @@
 }
 #image-modal-image {
     display: block;
+    max-height: 90vh;
     max-width: 100%;
 }
