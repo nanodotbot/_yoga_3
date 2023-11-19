@@ -1,0 +1,88 @@
+#background {
+  z-index: 0;
+  height: 100vh;
+  background-image: url('imgs/zoltan-tasi-vHnVtLK8rCc-unsplash.jpg');
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#landing {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+#landing > #header {
+  width: 100vw;
+  padding: calc(var(--default-gap) / 2) 0;
+  margin: 0 auto var(--default-gap) auto;
+}
+#landing > #header > h1 {
+  margin-bottom: var(--default-gap);
+  font-size: calc(4rem + 5vw);
+  line-height: 1;
+  color: var(--white);
+  text-align: center;
+}
+#landing > #header > p {
+  font-size: 2rem;
+}
+#landing #landing-nav {
+  width: 1200px;
+  max-width: 96vw;
+  padding: 0 var(--default-gap);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(5, max-content);
+  align-content: center;
+  justify-content: space-between;
+  gap: var(--default-gap);
+}
+#landing #landing-nav > a {
+  display: block;
+  text-align: center;
+  font-size: calc(1rem + 2vw);
+  color: var(--white);
+}
+#landing #landing-nav > a.active {
+  text-decoration: underline;
+}
+#landing #landing-nav > a:hover {
+  color: var(--blue-light);
+  text-decoration: underline;
+  background-color: transparent;
+}
+#landing #social-header {
+  position: absolute;
+  bottom: var(--default-gap);
+}
+.social {
+  width: 100%;
+  text-align: center;
+  display: grid;
+  grid-template-columns: min-content min-content;
+  align-items: center;
+  justify-content: center;
+  gap: calc(var(--default-gap) / 2);
+}
+.social > a {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+}
+.social > a:hover > svg {
+  fill: var(--blue-light);
+  background-color: transparent;
+}
+@media screen and (max-width: 450px) {
+  #landing #landing-nav {
+    grid-template-columns: repeat(3, max-content);
+  }
+}
